@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="assets/favicon1.svg" type="image/svg+xml" />
+    <title>Kanban Board</title>
+
+    <title>Kanban - Personal Task Manager</title>
+
+<meta
+  name="description"
+  content="A minimal Kanban task management board built with HTML, CSS and JavaScript."
+/>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="brand">
+          <div class="logo">Kanban<span>.</span></div>
+
+          <p>Your personal task manager</p>
+        </div>
+
+        <div class="header-actions">
+          <input
+            type="text"
+            id="search-input"
+            class="search"
+            placeholder="Search tasks..."
+          />
+
+          <button id="theme-toggle" class="theme-toggle" type="button">
+            🌙
+          </button>
+
+          <button id="open-modal" class="btn-primary" type="button">
+            + Add Task
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main -->
+
+    <main class="container">
+      <section class="board">
+        <article class="column">
+          <div class="column-header">
+            <h2>Todo</h2>
+
+            <span class="column-count">0</span>
+          </div>
+
+          <div class="cards" data-status="todo"></div>
+        </article>
+
+        <article class="column">
+          <div class="column-header">
+            <h2>In Progress</h2>
+
+            <span class="column-count">0</span>
+          </div>
+
+          <div class="cards" data-status="progress"></div>
+        </article>
+
+        <article class="column">
+          <div class="column-header">
+            <h2>Review</h2>
+
+            <span class="column-count">0</span>
+          </div>
+
+          <div class="cards" data-status="review"></div>
+        </article>
+
+        <article class="column">
+          <div class="column-header">
+            <h2>Done</h2>
+
+            <span class="column-count">0</span>
+          </div>
+
+          <div class="cards" data-status="done"></div>
+        </article>
+      </section>
+    </main>
+
+    <!-- Modal -->
+
+    <div class="modal-overlay">
+      <div class="modal">
+        <div class="modal-header">
+          <h2 id="modal-title">Create Task</h2>
+
+          <button class="close-modal" type="button">×</button>
+        </div>
+
+        <form id="task-form">
+          <input
+            id="task-title"
+            type="text"
+            placeholder="Task title"
+            required
+          />
+
+          <textarea id="task-description" placeholder="Description"></textarea>
+
+          <select id="task-priority" required>
+            <option value="" selected disabled>Select Priority</option>
+
+            <option value="High">High</option>
+
+            <option value="Medium">Medium</option>
+
+            <option value="Low">Low</option>
+          </select>
+
+          <select id="task-tag">
+            <option value="">Select Category</option>
+
+            <option value="Design">Design</option>
+
+            <option value="Development">Development</option>
+
+            <option value="Bug">Bug</option>
+
+            <option value="Testing">Testing</option>
+
+            <option value="Research">Research</option>
+
+            <option value="Documentation">Documentation</option>
+
+            <option value="Meeting">Meeting</option>
+
+            <option value="Personal">Personal</option>
+
+            <option value="Other">Other</option>
+          </select>
+
+          <input type="date" id="task-due" />
+
+          <select id="task-status" required>
+            <option value="" selected disabled>Select Status</option>
+
+            <option value="todo">Todo</option>
+
+            <option value="progress">In Progress</option>
+
+            <option value="review">Review</option>
+
+            <option value="done">Done</option>
+          </select>
+
+          <button id="submit-task" class="btn-primary" type="submit">
+            Create
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">Organize. Prioritize. Deliver.</footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/tasks.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/drag.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
