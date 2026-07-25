@@ -4,6 +4,13 @@ A minimal and responsive Kanban task management application built using pure HTM
 
 The project provides a simple workflow to create, organize, and manage tasks using a Kanban-style board.
 
+## Preview
+
+<p align="center">
+  <img src="assets/light-mode.png" width="48%" />
+  <img src="assets/dark-mode.png" width="48%" />
+</p>
+
 ## Features
 
 - Create, update, and delete tasks
@@ -25,29 +32,35 @@ The project provides a simple workflow to create, organize, and manage tasks usi
 
 ## Project Structure
 
-Kanban/
+```text
+Kanban-Board/
 │
 ├── assets/
-│ └── favicon.svg
+│   ├── favicon.svg
+│   ├── light-mode.png
+│   └── dark-mode.png
 │
 ├── css/
-│ ├── reset.css
-│ ├── variables.css
-│ ├── components.css
-│ └── style.css
+│   ├── reset.css
+│   ├── variables.css
+│   ├── components.css
+│   └── style.css
 │
 ├── js/
-│ ├── data.js
-│ ├── storage.js
-│ ├── ui.js
-│ ├── tasks.js
-│ ├── modal.js
-│ ├── drag.js
-│ ├── search.js
-│ ├── theme.js
-│ └── app.js
+│   ├── data.js
+│   ├── storage.js
+│   ├── ui.js
+│   ├── tasks.js
+│   ├── modal.js
+│   ├── drag.js
+│   ├── search.js
+│   ├── theme.js
+│   └── app.js
 │
-└── index.html
+├── index.html
+│
+└── README.md
+```
 
 ## How It Works
 
