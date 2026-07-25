@@ -11,6 +11,10 @@ The project provides a simple workflow to create, organize, and manage tasks usi
   <img src="assets/dark-mode.png" width="48%" />
 </p>
 
+## Live Demo
+
+https://kanban-teal-six.vercel.app/
+
 ## Features
 
 - Create, update, and delete tasks
